@@ -1,7 +1,13 @@
-import React from 'react'
+import React from "react";
 
-export default class Todo extends React.Component {
-  render() {
-    return null
-  }
-}
+const Todo = (props) => {
+  return (
+    <div
+      onClick={() => props.toggleItem(props.id)}
+      className={`todo ${props.completed ? "completed" : ""}`}>
+      <p>{props.name}</p>
+    </div>
+  );
+};
+
+export default Todo;
